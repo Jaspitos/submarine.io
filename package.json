@@ -1,0 +1,28 @@
+{
+  "name": "login-mongodb",
+  "version": "1.0.0",
+  "description": "Login system + mongodb",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test/test.js",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "login",
+    "db",
+    "fun",
+    "love"
+  ],
+  "author": "Lorenzo Gamboa Garcia",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "connect-mongo": "^1.2.1",
+    "cookie-parser": "^1.4.3",
+    "crypto": "0.0.3",
+    "ejs": "^2.4.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.0",
+    "mongodb": "^2.2.2"
+  }
+}
