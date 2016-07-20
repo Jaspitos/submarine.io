@@ -2,7 +2,7 @@
 
  	var dbHost = process.env.DB_HOST || 'localhost';
 	var dbPort = process.env.DB_PORT || 27017;
- 	var dbName = process.env.DB_NAME || 'test';
+ 	var dbName = process.env.DB_NAME || 'accounts';
 
 	var mongoconf = {
  		'dbHost' : dbHost,

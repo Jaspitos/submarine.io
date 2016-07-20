@@ -1,11 +1,72 @@
-<%= title %>
-<%= udata.user %>
-<%= udata.pass %>
 
 <html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="css/chat.css">
+
 </head>
 <body>
-	
-</body>
+
+ <nav>
+    <div class="nav-wrapper light-blue lighten-2">
+      <a href="#" class="brand-logo">Submarine.io</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Profile</a></li>
+        <li><a id="btn-logout">LogOut</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+
+   <div class="row">
+      <div class="col s4">
+      <div class="chat-window" ng-app="chat-app">
+  <div class="title-bar">
+    <div class="window-controls"></div>
+    <span>chat window</span>
+  </div>
+  <div class="app-content" ng-controller="ChatController" chat-app-container>
+    <div class="messages-container">
+      <div class="messages-wrapper">
+        <ul>
+          <li class="message-item" ng-repeat="user in users track by $index">
+            <img ng-src="{{ user.picture.thumbnail }}" alt="" class="avatar"/>
+            <a href="#" class="nickname">{{ user.username }}</a>
+            <span class="timestamp">{{ user.timestamp }}</span>
+            <p class="message">
+              {{ user.location.street }}
+            </p>
+          </li>
+        </ul>  
+      </div>
+    </div>
+    <div class="user-input-wrapper">
+      <textarea user-input-field placeholder="Your message ..." ng-model="userInput" ng-trim="false"></textarea>
+      <i class="fa fa-smile-o emoji-icon "></i> 
+    </div>
+  </div>
+</div>
+
+
+
+      </div>
+
+
+      <div class="col s8">
+
+
+
+      
+  </div>
+      </div>
+     
+    
+
+<script src="/js/libs/jquery.min.js"></script>
+<script src="/js/libs/socket.io-1.4.5.js"></script>
+<script src="/js/views/logout.js"></script>
+<script src="/js/views/chat-g.js"></script>
+
+ </body>
 </head>
 </html>

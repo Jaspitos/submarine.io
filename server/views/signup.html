@@ -1,0 +1,49 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/login.css">
+</head></html>
+<body class="align">
+
+  <div class="site__container">
+
+    <div class="grid__container">
+
+      <form id="login" method="post" class="form form--login">
+
+        <div class="form__field">
+          <label class="fontawesome-font" for="login__name" ><span class="hidden">Name</span></label>
+          <input id="login__name" name='name' type="text" class="form__input" placeholder="Name" required>
+        </div>
+
+        <div class="form__field">
+          <label class="fontawesome-envelope" for="login__email"><span class="hidden">E-mail</span></label>
+          <input id="login__email" name='e-mail' type="text" class="form__input" placeholder="E-mail" required>
+        </div>
+
+        <div class="form__field">
+          <label class="fontawesome-user" for="login__username"><span class="hidden">Username</span></label>
+          <input id="login__username" name='username' type="text" class="form__input" placeholder="Username" required>
+        </div>
+
+        <div class="form__field">
+          <label class="fontawesome-lock" for="login__password"><span class="hidden">Password</span></label>
+          <input id="login__password" name='pass' type="password" class="form__input" placeholder="Password" required>
+        </div>
+
+        <div class="form__field">
+          <input id="btn-signup" type="submit" value="signup">
+        </div>
+
+      </form>
+
+      <p class="text--center">Not a member? <a href="#">Sign up now</a> <span class="fontawesome-arrow-right"></span></p>
+
+    </div>
+
+  </div>
+<script src="/js/libs/jquery.min.js"></script>
+<script src="/js/libs/jquery.form.js"></script>
+<script src="/js/views/signup.js"></script>
+
+</body>
+</html>
