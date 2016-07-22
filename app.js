@@ -64,7 +64,7 @@
 	});
 
 	// Instantiate Socket.io and will be listeing to Express/HTTP server
-	io.listen(server);
+	//io.listen(server);
 
 
 
