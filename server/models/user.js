@@ -6,7 +6,6 @@
  var mongoose = require('mongoose');
  var schema = mongoose.Schema;
 
- //mongoose.connect('mongodb://localhost/accounts');
 
  /*defining schema*/
  var userSchema = new schema({

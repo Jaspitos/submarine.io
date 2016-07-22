@@ -86,6 +86,11 @@
 			}
 		});
 
+		app.get('/profile', function(req,res){
+
+			res.render('profile');
+		});
+
 
 		//Http get request to logout
 		app.post('/logout', function(req, res){
@@ -93,6 +98,7 @@
 			res.clearCookie('pass');
 			req.session.destroy(function(e){ res.status(200).send('ok'); });
 		})
+
 
 		// Htpp request site not routed
 		app.get('*', function(req, res) { 

@@ -36,7 +36,7 @@
 	var dbURL = 'mongodb://'+dbHost+':'+dbPort+'/'+dbName;
 	if (app.get('env') == 'live'){
 	// prepend url with authentication credentials // 
-	dbURL = 'mongodb://'+process.env.DB_USER+':'+process.env.DB_PASS+'@'+dbHost+':'+dbPort+'/'+dbName;
+	dbURL = 'mongodb://lorenzito93:soyinformatico93@ds027215.mlab.com:27215/accounts';
 	}
 
 	//TODO: Opens session
