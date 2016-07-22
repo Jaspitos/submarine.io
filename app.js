@@ -39,9 +39,11 @@
 	dbURL = 'mongodb://lorenzito93:soyinformatico93@ds027215.mlab.com:27215/accounts';
 	console.log(dbURL);
 	}
-
+	
+	console.log('Entorno elegido'+app.get('env'));
+	
+	
 	//TODO: Opens session
-
 	app.use(session({
 	secret: 'faeb4453e5d14fe6f6d04637f78077c76c73d1b4',
 	proxy: true,
