@@ -34,7 +34,7 @@
 
 	//TODO
 	var dbURL = 'mongodb://'+dbHost+':'+dbPort+'/'+dbName;
-	if (app.get('env') == 'live'){
+	if (app.get('env') == 'production'){
 	// prepend url with authentication credentials // 
 	dbURL = 'mongodb://lorenzito93:soyinformatico93@ds027215.mlab.com:27215/accounts';
 	console.log(dbURL);
