@@ -1,7 +1,7 @@
 {
-  "name": "login-mongodb",
+  "name": "pokechu.io",
   "version": "1.0.0",
-  "description": "Login system + mongodb",
+  "description": "Pokemon Go news",
   "main": "app.js",
   "scripts": {
     "test": "node test/test.js",
