@@ -1,4 +1,4 @@
-	/**
+ 	/**
 	* @Author: Lorenzo Gamboa Garcia
 	* @Desc: JS File to set Web App configurations
 	*/
@@ -36,7 +36,7 @@
 	var dbURL = 'mongodb://'+dbHost+':'+dbPort+'/'+dbName;
 	if (app.get('env') == 'production'){
 	// prepend url with authentication credentials // 
-	dbURL = 'mongodb://lorenzito93:soyinformatico93@ds027215.mlab.com:27215/accounts';
+	dbURL = 'mongodb://lorenzito93:soygamboa93@ds027215.mlab.com:27215/accounts';
 	console.log(dbURL);
 	}
 	
