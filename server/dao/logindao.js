@@ -7,7 +7,7 @@
 		var dbprop = require('../properties/db-properties').loadDbProperties();
 
 
-		 mongoose.connect('mongodb://localhost/accounts');
+		 mongoose.connect('mongodb://lorenzito93:soygamboa93@ds027215.mlab.com:27215/accounts'||'mongodb://localhost/accounts');
 
 		/* establish the database connection */
 		var db = new MongoDB(dbprop.dbName, new Server(dbprop.dbHost, dbprop.dbPort, {auto_reconnect: true}), {w: 1});
