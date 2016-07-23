@@ -37,9 +37,8 @@
 	if (app.get('env') == 'production'){
 	// prepend url with authentication credentials // 
 	dbURL = 'mongodb://lorenzito93:soygamboa93@ds027215.mlab.com:27215/accounts';
-	console.log(dbURL);
 	}
-	
+	console.log(dbURL);
 	console.log('Entorno elegido'+app.get('env'));
 	
 	
