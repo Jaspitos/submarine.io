@@ -12,7 +12,7 @@
 	var cookieParser = require('cookie-parser');
 	var MongoStore = require('connect-mongo')(session);
 	var dbprop = require('./server/properties/db-properties').loadDbProperties();
-	var io = require('socket.io');
+	//var io = require('socket.io');
 
 	var app = express();
 
