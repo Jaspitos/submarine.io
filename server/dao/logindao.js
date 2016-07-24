@@ -22,7 +22,7 @@
 		}
 
 		
-
+		
 		/* establish the database connection */
 		var db = new MongoDB(dbprop.dbName, new Server(dbprop['app'].dbHost, dbprop.dbPort, {auto_reconnect: true}), {w: 1});
 			db.open(function(e, d){
