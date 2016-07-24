@@ -6,10 +6,18 @@
 		var Server 		= require('mongodb').Server;
 		var dbprop = require('../properties/db-properties');
 
-		console.log(process.env.NODE_ENV);
+		console.log('Entorno elegido  '+process.env.NODE_ENV);
+
 		dbprop = dbprop.loadDbProperties(process.env.NODE_ENV);
-		console.log(dbprop);
-		 mongoose.connect('mongodb://localhost/accounts');
+		
+
+
+	if(process.env.NODE_ENV == 'development')
+		mongoose.connect('mongodb://localhost/accounts');
+		else
+			'mongodb://lorenzito93:soygamboa93@ds027215.mlab.com:27215/accounts';
+
+		
 
 		/* establish the database connection */
 		var db = new MongoDB(dbprop.dbName, new Server(dbprop['app'].dbHost, dbprop.dbPort, {auto_reconnect: true}), {w: 1});
