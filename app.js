@@ -11,10 +11,16 @@
 	var bodyParser = require('body-parser');
 	var cookieParser = require('cookie-parser');
 	var MongoStore = require('connect-mongo')(session);
-	var dbprop = require('./server/properties/db-properties').loadDbProperties();
-	//var io = require('socket.io');
-
+	var dbprop = require('./server/properties/db-properties');
+	
 	var app = express();
+
+
+	if(app.get('env') == 'development')
+	process.env.NODE_ENV = 'development';
+		else
+			process.env.NODE_ENV = 'production';
+
 
 	/*Defining App settings*/
 	app.set('port',process.env.PORT || 3000);
@@ -28,10 +34,14 @@
 	app.use(express.static(__dirname + '/public'));//Defines public folder files as static (css,js,img..)
 
 	//Mongo database Connection
-	var dbHost = dbprop.dbHost;
+
+	
+	
+	dbprop = dbprop.loadDbProperties(process.env.NODE_ENV);
+	var dbHost = dbprop['app'].dbHost;
 	var dbPort = dbprop.dbPort;
 	var dbName = dbprop.dbName;
-
+	
 	//TODO
 	var dbURL = 'mongodb://'+dbHost+':'+dbPort+'/'+dbName;
 	if (app.get('env') == 'production'){

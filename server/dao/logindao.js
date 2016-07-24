@@ -1,16 +1,18 @@
-		 /*Instande of needed modules*/
+		/*Instande of needed modules*/
 		var crypto 		= require('crypto');
 		var MongoDB 	= require('mongodb').Db;
 		var mongoose = require('mongoose');
 		var user 		= require('../models/user')
 		var Server 		= require('mongodb').Server;
-		var dbprop = require('../properties/db-properties').loadDbProperties();
+		var dbprop = require('../properties/db-properties');
 
-
-		mongoose.connect('mongodb://lorenzito93:soygamboa93@ds027215.mlab.com:27215/accounts'||'mongodb://localhost/accounts');
+		console.log(process.env.NODE_ENV);
+		dbprop = dbprop.loadDbProperties(process.env.NODE_ENV);
+		console.log(dbprop);
+		 mongoose.connect('mongodb://localhost/accounts');
 
 		/* establish the database connection */
-		var db = new MongoDB(dbprop.dbName, new Server(dbprop.dbHost, dbprop.dbPort, {auto_reconnect: true}), {w: 1});
+		var db = new MongoDB(dbprop.dbName, new Server(dbprop['app'].dbHost, dbprop.dbPort, {auto_reconnect: true}), {w: 1});
 			db.open(function(e, d){
 			if (e) {
 				console.log(e);
