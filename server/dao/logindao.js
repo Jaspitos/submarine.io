@@ -1,10 +1,10 @@
 		/*Instande of needed modules*/
 		var crypto 		= require('crypto');
 		var MongoDB 	= require('mongodb').Db;
-		var mongoose = require('mongoose');
+		var mongoose 	= require('mongoose');
 		var user 		= require('../models/user')
 		var Server 		= require('mongodb').Server;
-		var dbprop = require('../properties/db-properties');
+		var dbprop 		= require('../properties/db-properties');
 
 		console.log('Entorno elegido  '+process.env.NODE_ENV);
 
@@ -12,10 +12,14 @@
 		
 
 
-	if(process.env.NODE_ENV == 'development')
-		mongoose.connect('mongodb://localhost/accounts');
-		else
-			'mongodb://lorenzito93:soygamboa93@ds027215.mlab.com:27215/accounts';
+		/*Check enviromemnt*/ 	
+		if(process.env.NODE_ENV == 'development')
+		{
+			mongoose.connect('mongodb://localhost/accounts');
+		}
+		else{
+			mongoose.connect('mongodb://lorenzito93:soygamboa93@ds027215.mlab.com:27215/accounts');
+		}
 
 		
 
