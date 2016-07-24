@@ -14,7 +14,7 @@
     },
     production: {
         app: {
-            dbHost: 'mongodb://lorenzito93:soygamboa93@ds027215.mlab.com'
+            dbHost: 'lorenzito93:soygamboa93@ds027215.mlab.com'
         },
         dbPort: '27215',
         dbName: 'accounts'
