@@ -16,8 +16,8 @@
         app: {
             dbHost: 'lorenzito93:soygamboa93@ds027215.mlab.com'
         },
-        dbPort: 'port',
-        dbName: 'db'
+        dbPort: '27215',
+        dbName: 'accounts'
    }
 };
 
