@@ -1,6 +1,7 @@
 
 	var logindao = require('../dao/logindao');
 	var User = require('../models/user');
+	var mailer = require('../models/mailer');
 
 	module.exports = function (app){
 		
@@ -67,7 +68,7 @@
 				if (!o){
 					res.status(400).send(e);
 				}	else{
-					
+					mailer.sendEmail(req.body['e-mail']);
 					res.status(200).send(o);
 				}
 			});
@@ -90,6 +91,12 @@
 
 			res.render('profile');
 		});
+
+		app.get('/play', function(req,res){
+
+			res.render('play');
+		});
+
 
 
 		//Http get request to logout

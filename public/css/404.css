@@ -1,0 +1,11 @@
+
+@font-face {
+    font-family: pokefont;
+    src: url(/font/pokemon/pokemon_GB.ttf);
+}
+
+.container{
+	position:relative;
+	top: 10px;
+	font-family: pokefont;
+}
