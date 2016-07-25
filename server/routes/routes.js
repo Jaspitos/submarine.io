@@ -97,6 +97,14 @@
 			res.render('play');
 		});
 
+		app.post('/playnow', function(req,res){
+			console.log("Eligiendo juego");
+			if(req.body['gamechoosen'] == 'blue'){
+				res.render('cartridge_blue');
+			}
+			else
+			res.render('404');
+		});
 
 
 		//Http get request to logout
