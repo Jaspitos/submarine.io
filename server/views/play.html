@@ -1,106 +1,151 @@
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
-<link rel="stylesheet" type="text/css" href="css/semantic.min.css">
-<link rel="stylesheet" type="text/css" href="css/play.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-</head>
-<body>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="/profile">Profile</a></li>
-        <li><a href="/play">Play</a></li>
-        <li><a href="/logout">Logout</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="/profile">Profile</a></li>
-        <li><a href="/play">Play</a></li>
-        <li><a href="/logout">Logout</a></li>
+			<html>
+			<head>
+			<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+			<link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+			<link rel="stylesheet" type="text/css" href="css/play.css">
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			</head>
+			<body>
+			  <nav>
+			    <div class="nav-wrapper yellow accent-2">
+			      <a href="#!" class="brand-logo">POKECHU.IO</a>
+			      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+			      <ul class="right hide-on-med-and-down">
+			        <li><a href="/profile">Profile</a></li>
+			        <li><a href="/play">Play</a></li>
+			        <li><a href="/logout">Logout</a></li>
+			      </ul>
+			      <ul class="side-nav" id="mobile-demo">
+			        <li><a href="/profile">Profile</a></li>
+			        <li><a href="/play">Play</a></li>
+			        <li><a href="/logout">Logout</a></li>
 
-      </ul>
-    </div>
-  </nav>
+			      </ul>
+			    </div>
+			  </nav>
 
-  <div class="container">
-  <div class="ui divided items">
-  <div class="item">
-    <div class="image">
-      <img src="/img/card-red.jpg">
-    </div>
-    <div class="content">
-      <a class="header">Pokemon Red version</a>
-      <div class="meta">
-        <span class="cinema">Game Boy</span>
-      </div>
-      <div class="description">
-        <p></p>
-      </div>
-      <div class="extra">
-        <div class="ui label">IMAX</div>
-        <div class="ui label"><i class="globe icon"></i> Additional Languages</div>
-      </div>
-    </div>
-  </div>
-  <div class="item">
-    <div class="image">
-      <img src="/img/card-blue.jpg">
-    </div>
-    <div class="content">
-      <a class="header">Pokemon Blue version</a>
-      <div class="meta">
-        <span class="cinema">Game Boy</span>
-      </div>
-      <div class="description">
-        <p></p>
-      </div>
-      <div class="extra">
-      <form method="POST" action="/playnow">
-      <input name="gamechoosen" value="blue" type="hidden">
-        <button type="submit">
-          Play Online!
-        </button>
-        </form>
-        <div class="ui label">Game Boy</div>
-      </div>
-    </div>
-  </div>
-  <div class="item">
-    <div class="image">
-      <img src="/img/card-green.jpg">
-    </div>
-    <div class="content">
-      <a class="header">Pokemon Blue version</a>
-      <div class="meta">
-        <span class="cinema">Game Boy</span>
-      </div>
-      <div class="description">
-        <p></p>
-      </div>
-      <div class="extra">
-        <div class="ui right floated primary button">
-          Buy tickets
-          <i class="right chevron icon"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  </div>
+			  <div class="container">
+			  <div class="ui divided items">
+			  <div class="item">
+			    <div class="image">
+			      <img src="/img/card-red.jpg">
+			    </div>
+			    <div class="content">
+			      <a class="header">Pokemon Red version</a>
+			      <div class="meta">
+			        <span class="cinema">Game Boy</span>
+			      </div>
+			      <div class="description">
+			        <p></p>
+			      </div>
+			      <div class="extra">
+			      <form method="POST" action="/playnow">
+			      <input name="gamechoosen" value="red" type="hidden">
+			        <button type="submit">
+			          Play Online!
+			        </button>
+			        </form>
+			        <div class="ui label">Game Boy</div>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="item">
+			    <div class="image">
+			      <img src="/img/card-blue.jpg">
+			    </div>
+			    <div class="content">
+			      <a class="header">Pokemon Blue version</a>
+			      <div class="meta">
+			        <span class="cinema">Game Boy</span>
+			      </div>
+			      <div class="description">
+			        <p></p>
+			      </div>
+			      <div class="extra">
+			      <form method="POST" action="/playnow">
+			      <input name="gamechoosen" value="blue" type="hidden">
+			        <button type="submit">
+			          Play Online!
+			        </button>
+			        </form>
+			        <div class="ui label">Game Boy</div>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="item">
+			    <div class="image">
+			      <img src="/img/card-green.jpg">
+			    </div>
+			    <div class="content">
+			      <a class="header">Pokemon Green version</a>
+			      <div class="meta">
+			        <span class="cinema">Game Boy</span>
+			      </div>
+			      <div class="description">
+			        <p></p>
+			      </div>
+			      <div class="extra">
+			        <div class="ui right floated primary button">
+			          Buy tickets
+			          <i class="right chevron icon"></i>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="item">
+			    <div class="image">
+			      <img src="/img/card-yellow.jpg">
+			    </div>
+			    <div class="content">
+			      <a class="header">Pokemon Yellow version</a>
+			      <div class="meta">
+			         <div class="ui label">Game Boy</div> <div class="ui label">1st Generation</div>
+			      </div>
 
-     
-    
+			      <div class="ui raised segment">
+			 	 <p>Third Pokémon game for Game Boy released worldwide, as a solitary version of Pokémon Red and Blue Versions. In Japan, the game was the fourth Pokémon game released, as a second solitary version of Pocket Monsters Red & Green.</p>
+				</div>
 
-<script src="/js/libs/jquery.min.js"></script>
-<script src="/js/libs/materialize.min.js"></script>
-<script src="/js/views/logout.js"></script>
+				  <div class="row">
+			      <div class=" col lg6">
+			      <form method="POST" action="/playnow">
+			      <input name="gamechoosen" value="yellow" type="hidden">
+			        <button class="ui yellow button" type="submit">
+			         <i class="tiny material-icons">games</i>&nbsp&nbsp Play Online
+			        </button>
+			        </form>
+			        
+			       
+			      </div>
+			       <div class="col lg6">
+			      <button class="ui button"> <i class="tiny material-icons">play_for_work</i>&nbsp&nbspDownload rom</button>
+			      </div>
+			      </div>
+			      
+			    </div>
+			  </div>
+			</div>
 
-<script>
- $(".button-collapse").sideNav();
- </script>
- </body>
-</head>
-</html>
+			<div class="row">
+			<div class="lg2">
+			<a href="https://play.google.com/store/apps/details?id=com.thaohuyemu.gbc&hl=es" >
+			   <img class="responsive-img" src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'  style="height:70px;width:170px"></a>
+			</div>
+			</div>
+			  </div>
+
+
+			    
+			    
+
+			<script src="/js/libs/jquery.min.js"></script>
+			<script src="/js/libs/materialize.min.js"></script>
+			<script src="/js/views/logout.js"></script>
+
+			<script>
+			 $(".button-collapse").sideNav();
+			 </script>
+			 </body>
+			</head>
+			</html>
