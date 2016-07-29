@@ -1,4 +1,7 @@
-
+    /*
+     *@Author: Lorenzo Gamboa Garcia
+     *@Desc: Enviroment variables for db set-up
+     */
 
  	var dbHost = process.env.DB_HOST  || 'localhost';
 	var dbPort = process.env.DB_PORT  || 27017;

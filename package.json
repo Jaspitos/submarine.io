@@ -27,6 +27,7 @@
     "mongodb": "^2.2.2",
     "mongoose": "^4.5.5",
     "nodemailer": "^2.5.0",
+    "pokedex-promise-v2": "^2.3.1",
     "socket.io": "^1.4.8"
   }
 }

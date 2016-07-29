@@ -1,4 +1,4 @@
- 	/**
+   /**
 	* @Author: Lorenzo Gamboa Garcia
 	* @Desc: JS File to set Web App configurations
 	*/
