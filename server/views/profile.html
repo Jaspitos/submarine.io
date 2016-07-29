@@ -1,37 +1,81 @@
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+			<html>
+			<head>
+			<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+			<link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			</head>
+			<body>
+
+			 		<nav>
+			          <div class="nav-wrapper yellow accent-2">
+			            <a href="#!" class="brand-logo">POKECHU.IO</a>
+			            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+			            <ul class="right hide-on-med-and-down">
+			              <li><a href="/play">Tools</a></li>
+			              <li><a href="/play">Play</a></li>
+			                <li><a href="/profile"><img class="ui medium circular image" src="<%= profile.profilePic %>" style="height:30px;width:30px;margin-top:19px"></a></li>
+			              <li><a class='dropdown-button ' data-beloworigin="true" data-activates='dropdown1'>   <i class="large material-icons">view_module</i></a></li>
+			               <!-- Dropdown Structure -->
+  							<ul id='dropdown1' class='dropdown-content'>
+						    <li><a id="btn-logout">Logout</a></li>
+						    <li class="divider"></li>
+						    <li><a href="#!">Contact Us</a></li>
+						    <li class="divider"></li>
+						    <li><a href="#!">Looking for developers</a></li>
+						  </ul>
+
+			            </ul>
+			            <ul class="side-nav" id="mobile-demo">
+			              <li><a href="/profile">Profile</a></li>
+			              <li><a href="/play">Play</a></li>
+			              <li><a href="/logout">Logout</a></li>
+
+			            </ul>
+			          </div>
+			        </nav>
+			  
+			  <div class ="container">
+			  <div class="ui secondary pointing menu">
+		  <a class="item active">
+		    Personal Data
+		  </a>
+		  <a class="item">
+		    Achivements
+		  </a>
+		  <a class="item">
+		    Friends
+		  </a>
+		  
+		</div>
+		<div class="ui segment">
+		  <p><%= profile.username %></p>
+		</div>
+			  </div>
+
+			     
+			    
+
+				<script src="/js/libs/jquery.min.js"></script>	
+				<script src="/js/libs/materialize.min.js"></script>
+				<script src="/js/views/logout.js"></script>
+
+				<script>
+				 $(".button-collapse").sideNav();
+				  $('.dropdown-button').dropdown({
+				      inDuration: 300,
+				      outDuration: 225,
+				      constrain_width: false, // Does not change width of dropdown to that of the activator
+				      hover: true, // Activate on hover
+				      gutter: 0, // Spacing from edge
+				      belowOrigin: false, // Displays dropdown below the button
+				      alignment: 'left' // Displays dropdown with edge aligned to the left of button
+				    }
+				  );
+        
+				 </script>
 
 
-</head>
-<body>
-
- 		<nav>
-          <div class="nav-wrapper yellow accent-2">
-            <a href="#!" class="brand-logo">POKECHU.IO</a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="/profile">Profile</a></li>
-              <li><a href="/play">Play</a></li>
-              <li><a href="/logout">Logout</a></li>
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-              <li><a href="/profile">Profile</a></li>
-              <li><a href="/play">Play</a></li>
-              <li><a href="/logout">Logout</a></li>
-
-            </ul>
-          </div>
-        </nav>
-  
-
-     
-    
-
-<script src="/js/libs/jquery.min.js"></script>
-<script src="/js/views/logout.js"></script>
-
-
- </body>
-</head>
-</html>
+			 </body>
+			</head>
+			</html>

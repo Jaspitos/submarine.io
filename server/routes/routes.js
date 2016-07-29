@@ -3,6 +3,8 @@ var logindao = require('../dao/logindao');
 var User = require('../models/user');
 var mailer = require('../models/mailer');
 
+
+
 module.exports = function (app){
 
 
@@ -52,7 +54,7 @@ module.exports = function (app){
 						});
 					});
 
-					// TODO: Not done yet 
+					// Route to signup.html
 					app.get('/signup', function(req, res) {
 						// create a new user
 
@@ -75,9 +77,7 @@ module.exports = function (app){
 
 					});
 
-
-
-					//Http get request home page
+					/* Http get request home page */
 					app.get('/index', function(req, res) {
 						if (req.session.user == null){
 					// if user is not logged-in redirect back to login page //
@@ -87,14 +87,19 @@ module.exports = function (app){
 				}
 			});
 
+					/* Http get request to profile.html */
 					app.get('/profile', function(req,res){
-
-						res.render('profile');
+						logindao.getProfileInfo(req.session.user.username , function(e, o){
+						if(e){
+							res.render('profile', {profile: e});
+						}
+					
+						})
+						
 					});
 
-					/*Renders play.html*/
+					/* Http get request to play.html */
 					app.get('/play', function(req,res){
-
 						res.render('play');
 					});
 
@@ -116,6 +121,7 @@ module.exports = function (app){
 						
 					});
 
+					/* Playground for flickr api */
 					app.get('/upload', function(req,res){
 						var title ="Uploading Site";
 						var Flickr = require("flickrapi"),
@@ -142,7 +148,7 @@ module.exports = function (app){
 
 
 
-					//Http get request to logout
+					//Http get request to logout.html
 					app.post('/logout', function(req, res){
 						res.clearCookie('user');
 						res.clearCookie('pass');

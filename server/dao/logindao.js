@@ -82,16 +82,18 @@
 			}
 
 			exports.signUp = function(name, email, username, pass, callback){
-				//console.log(name, email, username, pass);
+				//console.log(dbName, email, username, pass);
 
 				var newUser = user({
 					name: name,
 			 		email: email,
 			 		username: username,
 			 		password: pass,
-			 		admin: false
+			 		admin: false,
+			 		profilePic: 'https://farm9.staticflickr.com/8712/28539637941_f5098c2461.jpg'
+			 		
 				});
-
+			
 			newUser.save(function(err) {
 		  	if (err) 
 		  		throw err
@@ -106,6 +108,19 @@
 
 			};
 
+
+			/*Retreives user personal information */
+			exports.getProfileInfo = function(username, callback){
+				user.findOne({username:username},function(e,o){
+					if (o){
+						console.log(o);
+						callback(o);
+					} else
+					callback(null);
+				})
+
+				
+			}
 		    
 
 
