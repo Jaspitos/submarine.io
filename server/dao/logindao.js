@@ -111,7 +111,7 @@
 
 			/*Retreives user personal information */
 			exports.getProfileInfo = function(username, callback){
-				user.findOne({username:username},function(e,o){
+				accounts.findOne({username:username},function(e,o){
 					if (o){
 						console.log(o);
 						callback(o);
