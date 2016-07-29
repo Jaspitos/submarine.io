@@ -1,4 +1,3 @@
-
 var logindao = require('../dao/logindao');
 var User = require('../models/user');
 var mailer = require('../models/mailer');

@@ -1,0 +1,16 @@
+
+@font-face {
+    font-family: pokefont;
+    src: url(/font/pokemon/Pokemon_Solid.ttf);
+}
+
+.brand-logo{
+ font-family: pokefont;
+ text-shadow: -2px 0 #3960aa, 0 2px #3960aa, 2px 0 #3960aa, 0 -2px #3960aa;
+}
+
+.container{
+	position:relative;
+	top: 10px;
+	
+}
